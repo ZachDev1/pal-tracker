@@ -7,8 +7,10 @@ import org.junit.Test;
 import java.time.LocalDate;
 import java.util.List;
 
+
 import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class InMemoryTimeEntryRepositoryTest {
     @Test
@@ -66,6 +68,7 @@ public class InMemoryTimeEntryRepositoryTest {
         TimeEntry created = repo.create(new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));
 
         repo.delete(created.getId());
+
         assertThat(repo.list()).isEmpty();
     }
 }
