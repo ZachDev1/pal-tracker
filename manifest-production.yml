@@ -3,5 +3,6 @@ applications:
 - name: pal-tracker
   path: build/libs/pal-tracker.jar
   host: zs-pal-tracker
+  SECURITY_FORCE_HTTPS: true
   services:
   - tracker-database
